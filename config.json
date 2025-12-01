@@ -1,0 +1,35 @@
+{
+    "mcpServers": {
+      "atlassian": {
+        "command": "docker",
+        "args": [
+          "run",
+          "--rm",
+          "--pull",
+          "always",
+          "-i",
+          "-e",
+          "CONFLUENCE_URL",
+          "-e",
+          "CONFLUENCE_PERSONAL_TOKEN",
+          "-e",
+          "CONFLUENCE_SSL_VERIFY",
+          "-e",
+          "JIRA_URL",
+          "-e",
+          "JIRA_PERSONAL_TOKEN",
+          "-e",
+          "JIRA_SSL_VERIFY",
+          "ghcr.io/sooperset/mcp-atlassian:latest"
+        ],
+        "env": {
+            "CONFLUENCE_PERSONAL_TOKEN": "YOUR_CONFLUENCE_PERSONAL_TOKEN",
+            "CONFLUENCE_URL": "CONFLUENCE_URL",
+            "CONFLUENCE_SSL_VERIFY": "true",
+            "JIRA_URL": "JIRA_URL",
+            "JIRA_PERSONAL_TOKEN": "JIRA_PERSONAL_TOKEN",
+            "JIRA_SSL_VERIFY": "true"
+        }
+      }
+    }
+  }
